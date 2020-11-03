@@ -18,10 +18,16 @@
     background: green;
     grid-column: 1/3;
     grid-row: 3/10;
+display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .c {
     background: blue;
     grid-column: 3/10;
     grid-row: 3/10;
+display: flex;
+    justify-content: center;
+    align-items: center;
 }

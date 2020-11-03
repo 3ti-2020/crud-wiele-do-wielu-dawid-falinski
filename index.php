@@ -11,7 +11,14 @@
 <div class="a"> 
     <h1>Dawid Faliński nr.2</h1>
 </div>
-<div class="b"> </div>
+<div class="b"> 
+<form action="insert.php" method="POST" class="formularz">
+                    <input type="text" name="autor" id="autor" placeholder="nazwisko">
+                    <input type="text" name="imie" id="imie" placeholder="imie">
+                    <input type="text" name="tytul" id="tytul" placeholder="tytul">
+                    <input type="submit" value="Dodaj">
+                    </form>
+</div>
 <div class="c"> 
 <?php
         $servername = "sql7.freemysqlhosting.net";
