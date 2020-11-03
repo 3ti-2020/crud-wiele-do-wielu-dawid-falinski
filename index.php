@@ -9,7 +9,8 @@
 <body>
 <div class="container">
 <div class="a"> 
-    <h1>Dawid Faliński nr.2</h1>
+    <h1>Dawid Faliński nr.2 |</h1>
+   <p>  <a href="index.html"> <h1> Karta</h1>  </a>  </p>
 </div>
 <div class="b"> 
 <form action="insert.php" method="POST" class="formularz">
