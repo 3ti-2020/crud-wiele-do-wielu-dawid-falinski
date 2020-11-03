@@ -3,30 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>stronka</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+<div class="a"> 
+    <h1>Dawid Faliński nr.2</h1>
+</div>
+<div class="b"> </div>
+<div class="c"> 
+<?php
+        $servername = "sql7.freemysqlhosting.net";
+        $username = "sql7374242";
+        $password = "zj3dgp4r5N";
+        $dbname = "sql7374242";
 
-    <?php
-    $conn=new mysqli('127.0.0.1','root','','koks');
-    $conn->set_charset('utf8');
-    $result=$conn->query("SELECT * FROM ksiazki");
-    echo("<table><tr>
-        <th>autor</th>
-        <th>tytul</th>
-    </tr>");
-    while($row=$result->fetch_assoc()){
-        $str = <<<HTML
-        <tr>
-            <td>$row[autor]</td>
-            <td>$row[tytul]</td>
-        </tr>
-        echo $str;
-    }
-    echo("</table>");
-    ?>
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        $result=$conn->query("SELECT id_book, autorzy.nazwisko, tytuly.tytul FROM books, autorzy, tytuly WHERE books.id_autor=autorzy.id_autor and books.id_tytul=tytuly.id_tytul");                    /*pozycje to nazwa widoku*/
+
+        echo("<table class='tabelka' border=1>");
+            echo("<tr>
+            <th>ID</th>
+            <th>Nazwisko</th>
+            <th>Tytul</th>
+            </tr>");
+
+                while($row=$result->fetch_assoc() ){
+                    echo("<tr>");
+                    echo("<td>".$row['id_book']."</td>");
+                    echo("<td>".$row['nazwisko']."</td>");
+                    echo("<td>".$row['tytul']."</td>");
+                    echo("</tr>");
+                }
+
+            echo("</table>");
+
+?>
     
+</div>
 
-    </div>
+
+</div>
+    
 </body>
 </html>
