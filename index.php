@@ -19,12 +19,12 @@
 <div class="guzik"> <input type="submit" value="Włącz tryb ciemny" onclick="zmien()">   </div>  
 </div>
 <div class="b"> 
-<form action="insert.php" method="POST" class="formularz">
-                    <input type="text" name="autor" id="autor" placeholder="nazwisko">
-                    <input type="text" name="imie" id="imie" placeholder="imie">
-                    <input type="text" name="tytul" id="tytul" placeholder="tytul">
-                    <input type="submit" value="Dodaj">
-                    </form>
+<form action="insert.php" method="POST">
+    IMIE<input type="text" name="imie" placeholder="imie">
+    NAZWISKO<input type="text" name="nazwisko" placeholder="nazwisko">
+    TYTUL<input type="text" name="tytul" placeholder="tytul">
+    <input type="submit" value="Wyslij" method="POST">
+    </form>
 </div>
 <div class="c"> 
 <?php
@@ -34,24 +34,22 @@
         $dbname = "sql7374242";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
-        $result=$conn->query("SELECT id_book, autorzy.nazwisko, tytuly.tytul FROM books, autorzy, tytuly WHERE books.id_autor=autorzy.id_autor and books.id_tytul=tytuly.id_tytul");                    /*pozycje to nazwa widoku*/
 
-        echo("<table class='tabelka' border=1>");
-            echo("<tr>
-            <th>ID</th>
-            <th>Nazwisko</th>
-            <th>Tytul</th>
-            </tr>");
+        $result = $conn->query("SELECT imie, nazwisko, tytul FROM tytuly, books, autorzy WHERE tytuly.id_tytul = books.id_tytul AND autorzy.id_autor=books.id_autor");
 
-                while($row=$result->fetch_assoc() ){
-                    echo("<tr>");
-                    echo("<td>".$row['id_book']."</td>");
-                    echo("<td>".$row['nazwisko']."</td>");
-                    echo("<td>".$row['tytul']."</td>");
-                    echo("</tr>");
-                }
+        echo("<table>");
+        echo("<tr>
+        <td>Imie</td>
+        <td>Nazwisko</td>
+        <td>Tytul</td>
+        </tr>");
 
-            echo("</table>");
+        while($wiersz = $result->fetch_assoc()){
+            echo("<tr>");
+            echo("<td>".$wiersz['imie']."<td>".$wiersz['nazwisko']."<td>".$wiersz['tytul']);
+            echo("</tr>");
+        }
+        echo("</table>");
 
 ?>
     

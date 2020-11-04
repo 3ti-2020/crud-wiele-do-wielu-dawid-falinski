@@ -6,46 +6,48 @@
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    $autor = $_POST['autor'];
-    $imie = $_POST['imie'];
-    $tytul = $_POST['tytul'];
-    $isbn = rand(100,999);
-
-    $sql_autor = "INSERT INTO `autorzy`(`id_autor`, `imie`, `nazwisko`) VALUES (NULL,'$imie','$autor')";
-
-    $query1 = mysqli_query($conn, $sql_autor);
-
-    if($query1){
-
-        $sql_tytul = "INSERT INTO `tytuly`(`id_tytul`, `tytul`, `ISBN`) VALUES (NULL,'$tytul','$isbn')";
-
-        $query2 = mysqli_query($conn, $sql_tytul);
-
-    }
-
-    if($query2){
-
-        $id_autor = "SELECT id_autor FROM `autorzy` WHERE nazwisko='$autor' ";
-        $result1 = $conn->query($id_autor);
-
-        while($row1 = $result1->fetch_assoc()){
-            $autorid = $row1['id_autor'];
-
-    };
-
-        $id_tytul = "SELECT id_tytul FROM `tytuly` WHERE tytul='$tytul' ";
-        $result2 = $conn->query($id_tytul);
-
-        while($row2 = $result2->fetch_assoc()){
-            $tytulid = $row2['id_tytul'];
-    };
-
-    $sql_autor_tytul = "INSERT INTO `books`(`id_book`, `id_tytul`, `id_autor`) VALUES (NULL, '$tytulid', '$autorid')";
-
-    $query3 = mysqli_query($conn, $sql_autor_tytul);
-
-    }
-
-    header("Location:http://127.0.0.1/j/index.php");
-
-?>
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }    
+  
+  $imie = $_POST['imie'];
+  $nazwisko=$_POST['nazwisko'];
+  
+  $sql="INSERT INTO `autorzy`(`imie`, `nazwisko`) VALUES ('$imie', '$nazwisko')";
+  
+  $tytul=$_POST['tytul'];
+  
+  $sql2="INSERT INTO `tytuly`(`tytul`) VALUES ('$tytul')";
+  
+  
+        mysqli_query($conn, $sql);
+        mysqli_query($conn, $sql2);
+  
+        $result = $conn->query("SELECT id_autor FROM autorzy order by id_autor desc limit 1");
+        $result2 = $conn->query("SELECT id_tytul FROM tytuly order by id_tytul desc limit 1");
+  
+  
+        while($wiersz = $result->fetch_assoc()){
+               $zmienna= $wiersz['id_autor'];
+        }
+  
+        while($wiersz2 = $result2->fetch_assoc()){
+              $zmienna2= $wiersz2['id_tytul'];
+        } 
+  
+        $sql3  = "INSERT INTO books(`id_tytul`, `id_autor`) VALUES ('$zmienna', '$zmienna2')";
+  
+        if ($conn->query($sql3) === TRUE) {
+              $zmienna = $conn->insert_id;
+              echo "New record created successfully. Last inserted ID is: " . $zmienna;
+            } else {
+              echo "Error: " . $sql . "<br>" . $conn->error;
+            };
+  
+        mysqli_query($conn, $sql3);
+  
+        $conn->close();
+  
+        header('Location: http://127.0.0.1/D/index.php');
+  
+  ?>
