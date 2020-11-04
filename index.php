@@ -16,7 +16,8 @@
    <p>  <a href="index.html"> <h1> Karta</h1>  </a>  </p>
 </div>
 <div class="a3"> 
-<input type="submit" value="Włącz tryb ciemny" onclick="zmien()">  </div>
+<div class="guzik"> <input type="submit" value="Włącz tryb ciemny" onclick="zmien()">   </div>  
+</div>
 <div class="b"> 
 <form action="insert.php" method="POST" class="formularz">
                     <input type="text" name="autor" id="autor" placeholder="nazwisko">
