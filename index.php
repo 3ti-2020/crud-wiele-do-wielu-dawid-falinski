@@ -9,13 +9,14 @@
 <body>
 <div class="container">
 <div class="a1"> 
-    <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-dawid-falinski"> <h2> Powrót do GitHub <h2> </a>
+    <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-dawid-falinski">     <img src="github.png" height="100px" width="100px">  </a> 
 </div>
 <div class="a2"> 
     <h1>Dawid Faliński nr.2 </h1>
    <p>  <a href="index.html"> <h1> Karta</h1>  </a>  </p>
 </div>
-<div class="a3"> </div>
+<div class="a3"> 
+<input type="submit" value="Włącz tryb ciemny" onclick="zmien()">  </div>
 <div class="b"> 
 <form action="insert.php" method="POST" class="formularz">
                     <input type="text" name="autor" id="autor" placeholder="nazwisko">
@@ -59,4 +60,5 @@
 </div>
     
 </body>
+<script src="main.js">
 </html>
