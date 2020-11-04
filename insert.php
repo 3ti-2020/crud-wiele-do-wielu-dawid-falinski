@@ -35,16 +35,7 @@
               $zmienna2= $wiersz2['id_tytul'];
         } 
   
-        $sql3  = "INSERT INTO books(`id_tytul`, `id_autor`) VALUES ('$zmienna', '$zmienna2')";
-  
-        if ($conn->query($sql3) === TRUE) {
-              $zmienna = $conn->insert_id;
-              echo "New record created successfully. Last inserted ID is: " . $zmienna;
-            } else {
-              echo "Error: " . $sql . "<br>" . $conn->error;
-            };
-  
-        mysqli_query($conn, $sql3);
+       
   
         $conn->close();
   

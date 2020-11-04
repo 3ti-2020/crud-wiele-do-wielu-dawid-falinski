@@ -11,6 +11,8 @@
     grid-row: 1/3;
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .a2 {
@@ -40,6 +42,7 @@
 display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .c {
@@ -63,3 +66,39 @@ display: flex;
 table,td, tr{
     border: 1px solid black;
     color: white;
+}
+
+
+.git {
+    background: yellow;
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.git:hover {
+    background: orange;
+}
+
+.karta {
+    background: yellow;
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.karta:hover {
+    background: orange;
+}
+
+a {
+  color: black; text-decoration: none;   
+}
