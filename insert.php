@@ -39,6 +39,6 @@
   
         $conn->close();
   
-        header('Location: http://127.0.0.1/D/index.php');
+        header('Location: https://dawidddd.herokuapp.com/');
   
   ?>
