@@ -22,22 +22,26 @@
 </div>
 <div class="b"> 
 <form action="insert.php" method="POST">
-    IMIE<input type="text" name="imie" placeholder="imie">
-    NAZWISKO<input type="text" name="nazwisko" placeholder="nazwisko">
-    TYTUL<input type="text" name="tytul" placeholder="tytul">
+    <input type="text" name="imie" placeholder="imie">
+    <input type="text" name="nazwisko" placeholder="nazwisko">
+    <input type="text" name="tytul" placeholder="tytul">
     <input type="submit" value="Wyslij" method="POST">
     </form>
 </div>
 <div class="c"> 
 <?php
+        
+        
+        
+        
         $servername = "sql7.freemysqlhosting.net";
         $username = "sql7374242";
         $password = "zj3dgp4r5N";
         $dbname = "sql7374242";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
-
-        $result = $conn->query("SELECT imie, nazwisko, tytul FROM tytuly, books, autorzy WHERE tytuly.id_tytul = books.id_tytul AND autorzy.id_autor=books.id_autor");
+        
+        $result = $conn->query("SELECT imie, nazwisko, tytul FROM ksiazki, wypozyczenia, autorzy WHERE ksiazki.id_ks = wypozyczenia.id_ks AND autorzy.id_a=wypozyczenia.id_a");
 
         echo("<table>");
         echo("<tr>
