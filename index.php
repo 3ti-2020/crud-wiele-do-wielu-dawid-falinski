@@ -19,11 +19,14 @@
 </div>
 <div class="a3"> 
 <div class="guzik"> <input type="submit" value="Włącz tryb ciemny" onclick="zmien()">   </div>  
+<div class="guzik1"> <input type="submit" value="Włącz standardowy tryb" onclick="zmien1()"> </div>
 </div>
 <div class="b"> 
+<div class="insert"> <h2> INSERT <h2> </div>
+
 <form action="insert.php" method="POST">
     <input type="text" name="imie" placeholder="imie">
-    <input type="text" name="nazwisko" placeholder="nazwisko">
+   <p> <input type="text" name="nazwisko" placeholder="nazwisko"> </p> 
     <input type="text" name="tytul" placeholder="tytul">
     <input type="submit" value="kliknij" method="POST">
     </form>
