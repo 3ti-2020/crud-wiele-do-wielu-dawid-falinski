@@ -25,7 +25,7 @@
     <input type="text" name="imie" placeholder="imie">
     <input type="text" name="nazwisko" placeholder="nazwisko">
     <input type="text" name="tytul" placeholder="tytul">
-    <input type="submit" value="Wyslij" method="POST">
+    <input type="submit" value="kliknij" method="POST">
     </form>
 </div>
 <div class="c"> 
@@ -41,7 +41,7 @@
 
         $conn = new mysqli($servername, $username, $password, $dbname);
         
-        $result = $conn->query("SELECT imie, nazwisko, tytul FROM ksiazki, wypozyczenia, autorzy WHERE ksiazki.id_ks = wypozyczenia.id_ks AND autorzy.id_a=wypozyczenia.id_a");
+        $result = $conn->query("SELECT tytul, imie, nazwisko FROM autorzy, ksiazki, wypozyczenia WHERE wypozyczenia.id_ks = ksiazki.id_ks AND wypozyczenia.id_a = autorzy.id_a");
 
         echo("<table>");
         echo("<tr>
