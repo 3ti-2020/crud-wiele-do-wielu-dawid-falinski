@@ -61,6 +61,7 @@
         echo("</table>");
 
 ?>
+ <a href="index.php">  <div class="wyloguj"> <h3> WYLOGUJ </H3> </div> </a>
 
 
     

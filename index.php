@@ -38,7 +38,11 @@
         <input type="submit" value="ZALOGUJ">
         <p> login: a </p>
         <p> haslo: a </p>
+        
         </form> 
+        
+        
+        
         <?php
 
         ?>
