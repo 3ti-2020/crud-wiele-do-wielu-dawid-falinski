@@ -14,3 +14,15 @@ function zmien1() {
     document.querySelector(".b").style.background = "lightgreen";
     document.querySelector(".c").style.background = "lightblue";
 }
+
+function link() {
+    login = document.querySelector(".login");
+    haslo = document.querySelector(".haslo");
+
+    if (login = "a", haslo = "a") {
+        location.href= logowanie.php;
+    }
+    else {
+        alert('zle haslo')
+    }
+}

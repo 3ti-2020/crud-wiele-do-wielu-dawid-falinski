@@ -22,45 +22,27 @@
 <div class="guzik1"> <input type="submit" value="Włącz standardowy tryb" onclick="zmien1()"> </div>
 </div>
 <div class="b"> 
-<div class="insert"> <h2> INSERT <h2> </div>
+<div class="insert">  </div>
 
-<form action="insert.php" method="POST">
-    <input type="text" name="imie" placeholder="imie">
-   <p> <input type="text" name="nazwisko" placeholder="nazwisko"> </p> 
-    <input type="text" name="tytul" placeholder="tytul">
-    <input type="submit" value="kliknij" method="POST">
-    </form>
+
 </div>
 <div class="c"> 
-<?php
-        
-        
-        
-        
-        $servername = "sql7.freemysqlhosting.net";
-        $username = "sql7374242";
-        $password = "zj3dgp4r5N";
-        $dbname = "sql7374242";
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
         
-        $result = $conn->query("SELECT tytul, imie, nazwisko FROM autorzy, ksiazki, wypozyczenia WHERE wypozyczenia.id_ks = ksiazki.id_ks AND wypozyczenia.id_a = autorzy.id_a");
+        
+        <form action="logowanie.php" method="post">
+        <p>Nazwa użytkownika</p>
+        <input type="text" class="login" placeholder="a">
+        <p>Hasło</p>
+        <input type="text" class="haslo" placeholder="a">  <br>
+        <input type="submit" value="ZALOGUJ">
+        <p> login: a </p>
+        <p> haslo: a </p>
+        </form> 
+        <?php
 
-        echo("<table>");
-        echo("<tr>
-        <td>Imie</td>
-        <td>Nazwisko</td>
-        <td>Tytul</td>
-        </tr>");
-
-        while($wiersz = $result->fetch_assoc()){
-            echo("<tr>");
-            echo("<td>".$wiersz['imie']."<td>".$wiersz['nazwisko']."<td>".$wiersz['tytul']);
-            echo("</tr>");
-        }
-        echo("</table>");
-
-?>
+        ?>
+        
     
 </div>
 
