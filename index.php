@@ -45,6 +45,24 @@
         
         <?php
 
+session_start();
+    
+if(isset($_GET['akcja']) && $_GET['akcja'] == 'wyloguj' ){ 
+    unset($_SESSION['zalogowany']);                         
+    unset($_SESSION['admin']); 
+}
+if(isset($_POST['haslo']) && isset($_POST['login'])){
+  while($wiersz = $result->fetch_assoc()){
+      if($wiersz['nazwa']==$_POST['login'] && $wiersz['haslo']==$_POST['haslo'] && $wiersz['admin'] == 1){
+          $_SESSION['zalogowany'] = 1;
+          $_SESSION['admin'] = 1;
+      }else if($wiersz['nazwa']==$_POST['login'] && $wiersz['haslo']==$_POST['haslo']){
+          $_SESSION['zalogowany'] = 1;
+      }
+  }
+}
+
+if(isset($_SESSION['zalogowany']) && $_SESSION['zalogowany'] == 1)
         ?>
         
     
