@@ -14,7 +14,7 @@
   
   </div>
 <div class="a2"> 
-    <h1>Dawid Faliński nr.2 </h1>
+    <h1>Dawid Faliński nr 2 </h1>
    
 </div>
 <div class="a3"> 
