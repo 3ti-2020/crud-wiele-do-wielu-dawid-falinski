@@ -71,6 +71,8 @@ display: flex;
 }
 
 
+
+
 table,td, tr{
     border: 1px solid black;
     color: white;
@@ -103,7 +105,21 @@ table,td, tr{
     margin: 10px;
 }
 
+.egzamin {
+    background: yellow;
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
 .karta:hover {
+    background: orange;
+}
+.egzamin:hover {
     background: orange;
 }
 

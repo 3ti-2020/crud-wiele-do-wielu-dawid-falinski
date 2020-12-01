@@ -11,6 +11,7 @@
 <div class="a1"> 
 <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-dawid-falinski"> <div class="git">   <h2> GitHub <h2>     </div> </a>
 <a href="index.html"> <div class="karta">   <h2> Karta <h2>     </div> </a>
+<a href="egzamin.php">  <div class="egzamin">  <h1> EE.09 <h1> </div> </a>
   
   </div>
 <div class="a2"> 
