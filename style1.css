@@ -117,4 +117,7 @@ a {
 .wyloguj:hover {
     background: yellow;
     }
-
+.kropka {
+    display: flex;
+    display: none;
+}

@@ -28,20 +28,38 @@
 <div class="c"> 
 
         
-        <p> W językach programowania tylko zmienna jednego typu wbudowanego może przyjmować wyłącznie dwie wartości. Jest to typ: <p>
+        <p> <h3> W językach programowania tylko zmienna jednego typu wbudowanego może przyjmować wyłącznie dwie wartości. Jest to typ:  </h3> <p>
+           <li> A. Logiczny  
+           <li> B. Łańcuchowy  
+           <li> C. Znakowy  
+           <li> D. Tablicowy 
+           <li class="kropka"> </li>
+          
+            
           <p>  <details> 
-            <summary> Kliknij, żeby zobaczyć odpowiedzi </summary>
+            <summary> Kliknij, żeby zobaczyć poprawną odpowiedź </summary>
             <table>
               <tr>
-                <th> <b> Logiczny </b> </th> 
-                <tr>
-                  <th> Łańcuchowy </th>
-                  <tr>
-                    <th> Znakowy</th>
-                    <tr>
-                      <th> Tablicowy </th>  <p>
+                <th> A. Logiczny  </th> 
+                
 </table>
-</details>
+</details> </p>
+
+<p> <h3> Narzędziem służącym do grupowania i prezentowania informacji z wielu rekordów w celu ich drukowania lub rozpowszechniania jest  </h3> <p>
+           <li> A. Makropolecenie  
+           <li> B. Kwerenda  
+           <li> C. Formularz  
+           <li> D. Raport 
+           <li class="kropka"> </li>
+           <p>  <details> 
+            <summary> Kliknij, żeby zobaczyć poprawną odpowiedź </summary>
+            <table>
+              <tr>
+                <th> D. Raport  </th> 
+                
+</table>
+</details> </p>
+
 
     
 </div>
