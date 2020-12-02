@@ -18,14 +18,13 @@
    
 </div>
 <div class="a3"> 
-<div class="guzik"> <input type="submit" value="Włącz tryb ciemny" onclick="zmien()">   </div>  
-<div class="guzik1"> <input type="submit" value="Włącz standardowy tryb" onclick="zmien1()"> </div>
+
 </div>
 
 
 
 
-<div class="c"> 
+<div class="b"> 
 
         
         <p> <h3> W językach programowania tylko zmienna jednego typu wbudowanego może przyjmować wyłącznie dwie wartości. Jest to typ:  </h3> <p>
@@ -62,6 +61,12 @@
 
 
     
+</div>
+
+<div class="c">  
+<img src="baner.png" height="100px">
+  <img src="logoo.png" height="100px">
+  <img src="logo.png" height="200px">
 </div>
 
 

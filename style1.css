@@ -37,16 +37,26 @@
 
 
 
-.c {
+.b {
     background: lightblue;
-    grid-column: 1/10;
+    grid-column: 1/5;
     grid-row: 3/10;
 display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
 }
 
+.c {
+    background: lightsalmon;
+    grid-column: 5/11;
+    grid-row: 3/10;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    
+}
 
 .guzik {
     width: 100px;
@@ -120,4 +130,8 @@ a {
 .kropka {
     display: flex;
     display: none;
+}
+
+img{
+    padding: 20px;
 }
