@@ -65,7 +65,7 @@
 
 <div class="c">  
 <img src="baner.png" height="100px">
-  <img src="logoo.png" height="100px">
+  <img src="logoo.png" height="200px">
   <img src="logo.png" height="200px">
 </div>
 
