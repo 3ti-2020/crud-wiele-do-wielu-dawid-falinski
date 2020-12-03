@@ -59,6 +59,22 @@
 </table>
 </details> </p>
 
+<p> <h3> Formularz nadrzędny wykorzystywany do nawigacji w bazie danych pomiędzy dostępnymi w systemie formularzami, kwerendami jest nazywany formularzem  </h3> <p>
+           <li> A. Pierwotnym  
+           <li> B. Głównym  
+           <li> C. Sterującym  
+           <li> D. Zagnieżdżonym 
+           <li class="kropka"> </li>
+          
+            
+          <p>  <details> 
+            <summary> Kliknij, żeby zobaczyć poprawną odpowiedź </summary>
+            <table>
+              <tr>
+                <th> C. Sterującym  </th> 
+                </table>
+                </details> </p>
+
 
     
 </div>
